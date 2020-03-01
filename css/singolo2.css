@@ -61,6 +61,14 @@
   background-color: cadetblue;
 }
 
+.title {
+  margin: 0;
+
+  font-family: "Lato-Black", "Arial", "sans-serif";
+  font-weight: 900;
+  color: #666d89;
+}
+
 /* ------------------------------ header ------------------------------ */ 
 
 .header__wrapper {
@@ -98,7 +106,7 @@
 .logo,
 .navigation {
   font-weight: 700;
-  font-family: "Lato-Bold", "Arial", sans-serif;
+  font-family: "Lato-Bold", "Arial", "sans-serif";
   color: #ffffff;
   
   text-transform: uppercase;
@@ -288,17 +296,9 @@
   border-bottom: 6px solid #ffffff;
 }
 
-.services__title,
-.feature__title {
-  margin: 0;
-}
-
 .services__title {
   font-size: 30px;
-  font-weight: 900;
-  font-family: "Lato-Black", "Arial", sans-serif;
   letter-spacing: -0.005em;
-  color: #666d89;
 }
 
 .services__description {
@@ -395,10 +395,7 @@
   padding-bottom: 9px;
 
   font-size: 18px;
-  font-weight: 900;
-  font-family: "Lato-Black", "Arial", sans-serif;
   word-spacing: 0.01px;
-  color: #666d89;
 }
 
 .feature__description {
@@ -418,4 +415,92 @@
   padding-left: 1px;
 }
 
-/* ------------------------------ SINGOLO. PART 2 ------------------------------ */ 
+/* ------------------------------ SINGOLO. PART 2 ------------------------------ */
+
+.portfolio__wrapper {
+  min-height: 870px;
+  padding-left: 40px;
+
+  background-color: #2d303a;
+  border-bottom: 6px solid #323746;
+}
+
+.portfolio__title {
+  font-size: 30px;
+  padding-top: 61px;
+}
+
+.portfolio__description {
+  margin: 0;
+  padding-top: 24px;
+
+  font-size: 18px;
+  font-weight: 300;
+  font-family: "Lato-Light", "Arial", sans-serif;
+  color: #767e9e;
+}
+
+.tags__list {
+  display: flex;
+  padding-left: 1px;
+  padding-top: 16px;
+  padding-bottom: 19px;
+
+  /* list-style: none; */
+}
+
+.tags__item {
+  margin-right: 10px;
+}
+
+.tags__button {
+  box-sizing: border-box;
+  min-height: 22px;
+  
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "Lato-Regular", "Arial", sans-serif;
+  color: #767e9e;
+  letter-spacing: -0.005em;
+  line-height: 18px;
+
+  background-color: transparent;
+  border: 1px solid #767e9e;
+  border-radius: 5px;
+}
+
+.tags__item:first-of-type .tags__button {
+  padding-right: 7px;
+}
+
+.tags__button_active {
+  color: #dedede;
+
+  border-color: #dedede;
+}
+
+.tags__button:focus,
+.tags__button:hover,
+.tags__button:active {
+  color: #f06c64;
+
+  border-color: #f06c64;
+  outline: none;
+
+  cursor: pointer;
+}
+
+.four-columns-three-rows-layout {
+  display: grid;
+  grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 20px;
+
+  max-height: 601px;
+  overflow: hidden;
+}
+
+.portfolio__image {
+  width: 220px;
+  height: 187px;
+}
