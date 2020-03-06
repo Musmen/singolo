@@ -1,5 +1,3 @@
-/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.26, autoprefixer: v9.7.3) */
-
 /* -------------------------- SINGOLO. PART 1-------------------------- */ 
 /* -------------------------------------------------------------------- */
 /* ------------------------------ common ------------------------------ */
@@ -625,7 +623,7 @@
   background-color: transparent;
   background-repeat: no-repeat;
 
-  border: 1px solid #767e9e;
+  border: 1px solid #666d89;
   border-radius: 50%;
 }
 
@@ -698,18 +696,26 @@
 }
 
 .two-columns-layout {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .feedback__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   width: 619px;
   margin-right: 20px;
 }
 
 .form__input {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   height: 38px;
   margin-bottom: 16px;
   padding: 3px 15px;
@@ -739,8 +745,52 @@
   border: 2px solid #767e9e;
 }
 
+.form__input:focus:invalid {
+  background-color: red;
+}
+
+.form__input::-webkit-input-placeholder {
+  color: #f48c8f;
+}
+
+.form__input::-moz-placeholder {
+  color: #f48c8f;
+}
+
+.form__input:-ms-input-placeholder {
+  color: #f48c8f;
+}
+
+.form__input::-ms-input-placeholder {
+  color: #f48c8f;
+}
+
 .form__input::placeholder {
   color: #f48c8f;
+}
+
+.form__input:focus::-webkit-input-placeholder,
+.form__input:hover::-webkit-input-placeholder,
+.form__input:active::-webkit-input-placeholder {
+  color: white;
+}
+
+.form__input:focus::-moz-placeholder,
+.form__input:hover::-moz-placeholder,
+.form__input:active::-moz-placeholder {
+  color: white;
+}
+
+.form__input:focus:-ms-input-placeholder,
+.form__input:hover:-ms-input-placeholder,
+.form__input:active:-ms-input-placeholder {
+  color: white;
+}
+
+.form__input:focus::-ms-input-placeholder,
+.form__input:hover::-ms-input-placeholder,
+.form__input:active::-ms-input-placeholder {
+  color: white;
 }
 
 .form__input:focus::placeholder,
@@ -763,7 +813,9 @@
 }
 
 .form__submit {
-  align-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
   width: 200px;
   margin-bottom: 10px;
 }
@@ -807,6 +859,8 @@
 }
 
 .contacts__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -861,4 +915,44 @@
   background-image: url("../assets/img/contacts/email.svg");
   background-size: 16px 18px;
   background-position: 0 5px;
+}
+
+/* ---------------------------------- footer --------------------------------- */
+
+.footer__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 76px;
+
+  color: #666d89;
+
+  background-color: #2d303a;
+}
+
+.footer__copyright {
+  margin-left: 12px;
+  padding-bottom: 2px;
+
+  font-size: 12px;
+  font-weight: 400;
+  font-family: "Lato-Regular", "Arial", sans-serif;
+}
+
+.footer__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 10px;
+}
+  
+.footer__social .social__item {
+  margin-left: 8px;
+  padding: 0;
 }
