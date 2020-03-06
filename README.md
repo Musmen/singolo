@@ -9,3 +9,5 @@
 [Singolo. Part 2 - deploy](https://musmen.github.io/singolo/singolo2.html)
 
 [Singolo. Part 3 - deploy](https://musmen.github.io/singolo/singolo3.html)
+
+[Singolo. Final - deploy](https://musmen.github.io/singolo/singolo.html)
