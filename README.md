@@ -10,4 +10,4 @@
 
 [Singolo. Part 3 - deploy](https://musmen.github.io/singolo/singolo3.html)
 
-[Singolo. Final - deploy](https://musmen.github.io/singolo/singolo.html)
+[Singolo. Final - deploy](https://musmen.github.io/singolo/index.html)
