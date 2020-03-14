@@ -1,5 +1,6 @@
 import ActiveMenu from './js/activeMenu.js';
 import TagsMenu from './js/tagsMenu.js';
+import Slider from './js/slider.js';
 
 window.onload = () => {
   const mainNavigation = document.querySelector('#mainNavigation');
@@ -13,4 +14,7 @@ window.onload = () => {
   const tagsList = document.querySelector('#tagsList');
   const tagsListActiveMenu = new TagsMenu(tagsList, 'tags__button', 'tags__button_active');
   tagsListActiveMenu.init();
+
+  const slider = new Slider();
+  slider.init();
 };
