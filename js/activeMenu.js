@@ -1,4 +1,4 @@
-import {ENTER_KEY} from './helper.js';
+import { ENTER_KEY } from './helper.js';
 
 export default class ActiveMenu {
   constructor(container, targetClass, activeClass) {
@@ -7,7 +7,7 @@ export default class ActiveMenu {
     this.activeClass = activeClass;
   }
 
-  removeActiveState = () => {
+  removeActiveState() {
     const { container, targetClass, activeClass } = this;
 
     container.querySelectorAll(`.${targetClass}`)
@@ -16,44 +16,41 @@ export default class ActiveMenu {
       });
   }
 
-  setActiveState = (target) => {
+  setActiveState(target) {
     const { activeClass } = this;
 
     target.classList.add(activeClass);
   }
 
-  toggleStates = (target) => {
-    const { targetClass, removeActiveState, setActiveState } = this;
+  toggleStates(target) {
+    this.removeActiveState();
+    this.setActiveState(target);
+  }
+
+  clickHandler(event) {
+    const { target } = event;
+    const { targetClass } = this;
 
     if (!target.classList.contains(targetClass)) return;
-    removeActiveState();
-    setActiveState(target);
+    this.toggleStates(target);
   }
 
-  clickHandler = (event) => {
-    const { target } = event;
-    const { toggleStates } = this;
-
-    toggleStates(target);
-  }
-
-  enterPressedHandler = (event) => {
+  enterPressedHandler(event) {
     const { target, key } = event;
-    const { toggleStates } = this;
+    const { targetClass } = this;
 
-    if (key !== ENTER_KEY) return;
-    toggleStates(target);
+    if ((key !== ENTER_KEY) || (!target.classList.contains(targetClass))) return;
+    this.toggleStates(target);
   }
 
-  addHandlers = () => {
-    const { container, clickHandler, enterPressedHandler } = this;
+  addHandlers() {
+    const { container } = this;
 
-    container.addEventListener('click', clickHandler);
-    container.addEventListener('keyup', enterPressedHandler);
+    container.addEventListener('click', this.clickHandler.bind(this));
+    container.addEventListener('keyup', this.enterPressedHandler.bind(this));
   }
 
-  init = () => {
-    const { addHandlers } = this;
-    addHandlers();
+  init() {
+    this.addHandlers();
   }
 }

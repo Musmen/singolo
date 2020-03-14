@@ -1,4 +1,5 @@
 import ActiveMenu from './js/activeMenu.js';
+import TagsMenu from './js/tagsMenu.js';
 
 window.onload = () => {
   const mainNavigation = document.querySelector('#mainNavigation');
@@ -10,6 +11,6 @@ window.onload = () => {
   portfolioImagesActiveMenu.init();
 
   const tagsList = document.querySelector('#tagsList');
-  const tagsListActiveMenu = new ActiveMenu(tagsList, 'tags__button', 'tags__button_active');
+  const tagsListActiveMenu = new TagsMenu(tagsList, 'tags__button', 'tags__button_active');
   tagsListActiveMenu.init();
 };
