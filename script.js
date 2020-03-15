@@ -1,6 +1,7 @@
 import ActiveMenu from './js/activeMenu.js';
 import TagsMenu from './js/tagsMenu.js';
 import Slider from './js/slider.js';
+import Form from './js/form.js';
 
 window.onload = () => {
   const mainNavigation = document.querySelector('#mainNavigation');
@@ -17,4 +18,7 @@ window.onload = () => {
 
   const slider = new Slider();
   slider.init();
+
+  const form = new Form();
+  form.init();
 };

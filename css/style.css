@@ -1,6 +1,14 @@
+@import './popup.css';
+
 /* -------------------------- SINGOLO. PART 1-------------------------- */ 
 /* -------------------------------------------------------------------- */
 /* ------------------------------ common ------------------------------ */
+
+html {
+  font-family: "Lato-Regular", "Arial", "sans-serif";
+
+  scroll-behavior: smooth;
+}
 
 .visually-hidden:not(:focus):not(:active) {
   position: absolute;
@@ -378,8 +386,8 @@
   display: none;
   height: 594px;
 
-  -webkit-animation: 0.3s ease-in-out;
-          animation: 0.3s ease-in-out;
+  -webkit-animation: 0.4s ease-in-out;
+          animation: 0.4s ease-in-out;
 
   border-bottom: 6px solid #ea676b;
 

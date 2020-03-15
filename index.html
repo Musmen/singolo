@@ -87,7 +87,7 @@
       </div>
     </section>
 
-    <section class="services" id="services">
+    <section id="services" class="services">
       <div class="services__wrapper wrapper">
         <h2 class="services__title title">Our Services</h2>
         <p class="services__description">
@@ -140,7 +140,7 @@
       </div>
     </section>
 
-    <section class="portfolio" id="portfolio">
+    <section id="portfolio" class="portfolio">
       <div class="portfolio__wrapper wrapper">
         <h2 class="portfolio__title title">Portfolio</h2>
         <p class="portfolio__description">
@@ -224,7 +224,7 @@
       </div>
     </section>
 
-    <section class="about" id="about">
+    <section id="about" class="about">
       <div class="about__wrapper wrapper">
         <h2 class="about__title title">About Us</h2>
         <p class="about__description">
@@ -305,23 +305,24 @@
       </div>
     </section>
 
-    <section class="feedback" id="feedback">
+    <section id="feedback" class="feedback">
       <div class="feedback__wrapper wrapper">
         <h2 class="feedback__title title">Get a Quote</h2>
         <p class="feedback__description">
           Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
         </p>
         <div class="two-columns-layout">
-          <form class="feedback__form" action="https://www.w3schools.com/action_page.php"
+          <form id="feedback__form" class="feedback__form" 
+            action="https://www.w3schools.com/action_page.php"
             method="post" name="feedback" target="_blank">
             <input class="form__name form__input" type="text" name="name" 
               placeholder="Name (Required)" minlength="2" maxlength="50" required>
             <input class="form__email form__input" type="email" name="email" 
               placeholder="Email (Required)" required>
-            <input class="form__subject form__input" type="text" name="subject" 
-              placeholder="Subject">
-            <textarea class="form__message form__input" name="message" 
-              placeholder="Describe your project in detail..."></textarea>
+            <input id="form__subject" class="form__subject form__input" 
+              maxlength="100" type="text" name="subject" placeholder="Subject">
+            <textarea id="form__message" class="form__message form__input" name="message" 
+              maxlength="500" placeholder="Describe your project in detail..."></textarea>
             <input class="form__submit form__input" type="submit" value="Submit">
           </form>
           <div class="feedback__contacts">
@@ -367,6 +368,19 @@
         </ul>
       </div>
     </footer>
+
+    <template id="popup__template">
+      <div class="popup__layout">
+        <div class="popup__wrapper">
+          <div class="popup__description">
+            <p class="popup__status"></p><hr>
+            <p class="popup__subject"></p><hr>
+            <p class="popup__message"></p><hr>
+          </div>
+          <button class="popup__close-button">OK</button>
+        </div>
+      </div>
+    </template>
 
     <script src="script.js" type="module"></script>
   </body>
