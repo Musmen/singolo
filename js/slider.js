@@ -1,9 +1,12 @@
+import { ENTER_KEY } from './helper.js';
+
 export default class Slider {
   constructor() {
     this.currentSlide = 0;
     this.isSliceEnabled = true;
-
     this.slides = [];
+
+    this.slider = null;
     this.controlButtons = {
       previousSlide: null,
       nextSlide: null,
@@ -51,28 +54,44 @@ export default class Slider {
     this.showItem('from-left');
   }
 
-  addClickHandler(button, callBack) {
-    button.addEventListener('click', () => {
-      if (this.isSliceEnabled) {
-        callBack(this.currentSlide);
-      }
-    });
+  sliderButtonClickHandler(callBack) {
+    if (this.isSliceEnabled) {
+      callBack(this.currentSlide);
+    }
+  }
+
+  phoneClickHandler(event) {
+    const { target } = event;
+    const dataClass = target.getAttribute('data-class');
+    if (!dataClass) return;
+
+    const content = this.slider.querySelector(`.${dataClass}-content`);
+    content.classList.toggle('display-off');
   }
 
   addHandlers() {
     const { previousSlide, nextSlide } = this.controlButtons;
     const { previousItem, nextItem } = this;
+    const gallery = this.slider.querySelector('.gallery');
 
-    this.addClickHandler(previousSlide, previousItem.bind(this));
-    this.addClickHandler(nextSlide, nextItem.bind(this));
+    previousSlide.addEventListener('click', () => {
+      this.sliderButtonClickHandler(previousItem.bind(this));
+    });
+    nextSlide.addEventListener('click', () => {
+      this.sliderButtonClickHandler(nextItem.bind(this));
+    });
+    gallery.addEventListener('click', this.phoneClickHandler.bind(this));
+    gallery.addEventListener('keyup', (event) => {
+      if (event.key !== ENTER_KEY) return;
+      this.phoneClickHandler.bind(this)(event);
+    });
   }
 
   init() {
-    const slider = document.querySelector('.slider');
-
-    this.slides = slider.querySelectorAll('.slider__item');
-    this.controlButtons.previousSlide = slider.querySelector('.slider__button_previous');
-    this.controlButtons.nextSlide = slider.querySelector('.slider__button_next');
+    this.slider = document.querySelector('.slider');
+    this.slides = this.slider.querySelectorAll('.slider__item');
+    this.controlButtons.previousSlide = this.slider.querySelector('.slider__button_previous');
+    this.controlButtons.nextSlide = this.slider.querySelector('.slider__button_next');
 
     this.addHandlers();
   }
