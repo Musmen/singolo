@@ -5,8 +5,3 @@ export const FORM_DEFAULT_TEXT = {
   SUBJECT: 'Without subject',
   MESSAGE: 'Without description',
 };
-
-export const FORM_SEND_TEXT = {
-  SUBJECT: '<span class="popup__lead">Subject:</span>',
-  MESSAGE: '<span class="popup__lead">Description:</span>',
-};

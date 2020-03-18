@@ -15,6 +15,12 @@
   z-index: 999;
 }
 
+.popup__layout:focus,
+.popup__layout:hover,
+.popup__layout:active {
+  outline: 0;
+}
+
 .popup__wrapper {
   display: flex;
   flex-direction: column;
@@ -41,6 +47,7 @@
   text-align: center;
 }
 
+.popup__status,
 .popup__subject,
 .popup__message {
   word-wrap: break-word;
@@ -67,5 +74,7 @@
   color: white;
 
   background-color: #666d89;
-  outline: none;
+  outline: 0;
+
+  cursor: pointer;
 }

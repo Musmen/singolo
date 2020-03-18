@@ -23,7 +23,7 @@
         <nav class="navigation">
           <ul id="mainNavigation" class="navigation__list list">
             <li class="navigation__item">
-              <a class="navigation__link  navigation__link_active link" href="#">home</a>
+              <a class="navigation__link link" href="#">home</a>
             </li>
             <li class="navigation__item">
               <a class="navigation__link link" href="#services">services</a>
@@ -148,77 +148,65 @@
         </p>
         <ul id="tagsList" class="tags__list list">
           <li class="tags__item">
-            <button class="tags__button tags__button_active" data-tag="All">All</button>
+            <button class="tags__button tags__button_active">All</button>
           </li>
           <li class="tags__item">
-            <button class="tags__button" data-tag="Web Design">Web Design</button>
+            <button class="tags__button">Web Design</button>
           </li>
           <li class="tags__item">
-            <button class="tags__button" data-tag="Graphic Design">Graphic Design</button>
+            <button class="tags__button">Graphic Design</button>
           </li>
           <li class="tags__item">
-            <button class="tags__button" data-tag="Artwork">Artwork</button>
+            <button class="tags__button">Artwork</button>
           </li>
         </ul>
         <ul id="portfolioImages" class="portfolio__images four-columns-three-rows-layout list">
           <li class="images__item">
             <img src="assets/img/portfolio/portfolio1.png" width="220" height="187"
-              alt="Portfolio example №1" class="portfolio__image" tabindex="0"
-              data-tag="All">
+              alt="Portfolio example №1" class="portfolio__image" tabindex="0">
           </li>
           <li class="images__item">
             <img src="assets/img/portfolio/portfolio2.png" width="220" height="187"
-              alt="Portfolio example №2" class="portfolio__image" tabindex="0"
-              data-tag="All">
+              alt="Portfolio example №2" class="portfolio__image" tabindex="0">
           <li class="images__item">
             <img src="assets/img/portfolio/portfolio3.png" width="220" height="187"
-              alt="Portfolio example №3" class="portfolio__image" tabindex="0"
-              data-tag="All">
+              alt="Portfolio example №3" class="portfolio__image" tabindex="0">
           </li>
           <li class="images__item">
             <img src="assets/img/portfolio/portfolio4.png" width="220" height="187"
-              alt="Portfolio example №4" class="portfolio__image" tabindex="0"
-              data-tag="All">
+              alt="Portfolio example №4" class="portfolio__image" tabindex="0">
           </li>
           <li class="images__item">
             <img src="assets/img/portfolio/portfolio5.png" width="220" height="187"
-              alt="Portfolio example №5" class="portfolio__image" tabindex="0"
-              data-tag="Web Design">
+              alt="Portfolio example №5" class="portfolio__image" tabindex="0">
           </li>
           <li class="images__item">
             <img src="assets/img/portfolio/portfolio6.png" width="220" height="187"
-              alt="Portfolio example №6" class="portfolio__image" tabindex="0"
-              data-tag="Web Design">
+              alt="Portfolio example №6" class="portfolio__image" tabindex="0">
           </li>
           <li class="images__item">
             <img src="assets/img/portfolio/portfolio7.png" width="220" height="187"
-              alt="Portfolio example №7" class="portfolio__image" tabindex="0"
-              data-tag="Artwork">
+              alt="Portfolio example №7" class="portfolio__image" tabindex="0">
           </li>
           <li class="images__item">
             <img src="assets/img/portfolio/portfolio8.png" width="220" height="187"
-              alt="Portfolio example №8" class="portfolio__image" tabindex="0"
-              data-tag="Artwork">
+              alt="Portfolio example №8" class="portfolio__image" tabindex="0">
           </li>
           <li class="images__item">
             <img src="assets/img/portfolio/portfolio9.png" width="220" height="187"
-              alt="Portfolio example №9" class="portfolio__image" tabindex="0"
-              data-tag="Graphic Design">
+              alt="Portfolio example №9" class="portfolio__image" tabindex="0">
           </li>
           <li class="images__item">
             <img src="assets/img/portfolio/portfolio10.png" width="220" height="187"
-              alt="Portfolio example №10" class="portfolio__image" tabindex="0"
-              data-tag="Graphic Design">
+              alt="Portfolio example №10" class="portfolio__image" tabindex="0">
           </li>
           <li class="images__item">
             <img src="assets/img/portfolio/portfolio11.png" width="220" height="187"
-              alt="Portfolio example №11" class="portfolio__image" tabindex="0"
-              data-tag="Artwork">
+              alt="Portfolio example №11" class="portfolio__image" tabindex="0">
           </li>
           <li class="images__item">
             <img src="assets/img/portfolio/portfolio12.png" width="220" height="187"
-              alt="Portfolio example №12" class="portfolio__image" tabindex="0"
-              data-tag="Artwork">
+              alt="Portfolio example №12" class="portfolio__image" tabindex="0">
           </li>
         </ul>
       </div>
@@ -323,7 +311,7 @@
               maxlength="100" type="text" name="subject" placeholder="Subject">
             <textarea id="form__message" class="form__message form__input" name="message" 
               maxlength="500" placeholder="Describe your project in detail..."></textarea>
-            <input class="form__submit form__input" type="submit" value="Submit">
+            <input id="form__submit" class="form__submit form__input" type="submit" value="Submit">
           </form>
           <div class="feedback__contacts">
             <h3 class="contacts__title title">Contact Information</h3>
@@ -370,12 +358,18 @@
     </footer>
 
     <template id="popup__template">
-      <div class="popup__layout">
+      <div class="popup__layout" tabindex="0">
         <div class="popup__wrapper">
           <div class="popup__description">
             <p class="popup__status"></p><hr>
-            <p class="popup__subject"></p><hr>
-            <p class="popup__message"></p><hr>
+            <p class="popup__subject">
+              <span class="popup__lead">Subject:</span>
+              <span class="popup__lead_subject"></span>
+            </p><hr>
+            <p class="popup__message">
+              <span class="popup__lead">Message:</span>
+              <span class="popup__lead_message"></span>
+            </p><hr>
           </div>
           <button class="popup__close-button">OK</button>
         </div>

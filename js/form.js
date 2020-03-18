@@ -1,4 +1,5 @@
-import { FORM_DEFAULT_TEXT, FORM_SEND_TEXT } from './helper.js';
+import { FORM_DEFAULT_TEXT } from './helper.js';
+import { disableTab } from './utils.js';
 import Popup from './popup.js';
 
 export default class Form {
@@ -6,16 +7,32 @@ export default class Form {
     this.form = null;
     this.subjectField = null;
     this.messageField = null;
+    this.formSubmitButton = null;
+    this.popup = null;
+  }
+
+  disableTabOnOpenPopup(popup) {
+    popup.addEventListener('keydown', disableTab);
+  }
+
+  enableTabOnClosePopup(popup) {
+    const { formSubmitButton } = this;
+
+    popup.removeEventListener('keydown', disableTab);
+    formSubmitButton.focus();
+    this.form.reset();
   }
 
   getMessageText() {
-    let subject = this.subjectField.value;
-    let message = this.messageField.value;
-    subject = subject ? `${FORM_SEND_TEXT.SUBJECT} ${subject}` : FORM_DEFAULT_TEXT.SUBJECT;
-    message = message ? `${FORM_SEND_TEXT.MESSAGE} ${message}` : FORM_DEFAULT_TEXT.MESSAGE;
+    const defaultSubject = FORM_DEFAULT_TEXT.SUBJECT;
+    const defaultMessage = FORM_DEFAULT_TEXT.MESSAGE;
+    const subject = this.subjectField.value;
+    const message = this.messageField.value;
 
     return {
       status: FORM_DEFAULT_TEXT.STATUS,
+      defaultSubject,
+      defaultMessage,
       subject,
       message,
     };
@@ -24,11 +41,10 @@ export default class Form {
   submitHandler(event) {
     event.preventDefault();
 
+    const { popup } = this;
     const content = this.getMessageText();
-    const container = this.form;
 
-    const popup = new Popup(container, content, 'form__popup');
-    popup.open();
+    popup.open(content);
   }
 
   addHandlers() {
@@ -39,6 +55,12 @@ export default class Form {
     this.form = document.querySelector('#feedback__form');
     this.subjectField = this.form.querySelector('#form__subject');
     this.messageField = this.form.querySelector('#form__message');
+    this.formSubmitButton = this.form.querySelector('#form__submit');
+
+    const onOpenPopupCallBack = this.disableTabOnOpenPopup.bind(this);
+    const onClosePopupCallBack = this.enableTabOnClosePopup.bind(this);
+
+    this.popup = new Popup(this.form, 'form__popup', onOpenPopupCallBack, onClosePopupCallBack);
 
     this.addHandlers();
   }
