@@ -11,11 +11,11 @@ export default class Form {
     this.popup = null;
   }
 
-  disableTabOnOpenPopup(popup) {
+  onOpenPopupHandler(popup) {
     popup.addEventListener('keydown', disableTab);
   }
 
-  enableTabOnClosePopup(popup) {
+  onClosePopupHandler(popup) {
     const { formSubmitButton } = this;
 
     popup.removeEventListener('keydown', disableTab);
@@ -57,10 +57,10 @@ export default class Form {
     this.messageField = this.form.querySelector('#form__message');
     this.formSubmitButton = this.form.querySelector('#form__submit');
 
-    const onOpenPopupCallBack = this.disableTabOnOpenPopup.bind(this);
-    const onClosePopupCallBack = this.enableTabOnClosePopup.bind(this);
+    const onOpenPopupHandler = this.onOpenPopupHandler.bind(this);
+    const onClosePopupHandler = this.onClosePopupHandler.bind(this);
 
-    this.popup = new Popup(this.form, 'form__popup', onOpenPopupCallBack, onClosePopupCallBack);
+    this.popup = new Popup(this.form, 'form__popup', onOpenPopupHandler, onClosePopupHandler);
 
     this.addHandlers();
   }

@@ -9,3 +9,11 @@ export const enableDocumentScroll = () => {
 export const disableTab = (event) => {
   if (event.key === 'Tab') event.preventDefault();
 };
+
+export const isDocumentBottomReached = () => {
+  const currentScrollY = window.pageYOffset;
+  const viewHeight = document.documentElement.clientHeight;
+  const maxScrollY = document.documentElement.scrollHeight;
+
+  return (currentScrollY + viewHeight >= maxScrollY);
+};

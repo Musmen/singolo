@@ -1,11 +1,12 @@
 import ActiveMenu from './js/activeMenu.js';
+import ScrollMenu from './js/scrollMenu.js';
 import TagsMenu from './js/tagsMenu.js';
 import Slider from './js/slider.js';
 import Form from './js/form.js';
 
 window.onload = () => {
   const mainNavigation = document.querySelector('#mainNavigation');
-  const mainNavigationActiveMenu = new ActiveMenu(mainNavigation, 'navigation__link', 'navigation__link_active');
+  const mainNavigationActiveMenu = new ScrollMenu(mainNavigation, 'navigation__link', 'navigation__link_active');
   mainNavigationActiveMenu.init();
 
   const portfolioImages = document.querySelector('#portfolioImages');
