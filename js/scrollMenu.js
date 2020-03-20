@@ -7,21 +7,24 @@ export default class ScrollMenu extends ActiveMenu {
     super(container, targetClass, activeClass);
 
     this.currentNavigationLink = null;
+    this.sectionList = null;
   }
 
   getCurrentNavigationLink() {
     if (isDocumentBottomReached()) return ELEMENTS.LAST_NAVIGATION_ITEM;
 
-    const { container } = this;
+    const { container, currentNavigationLink, sectionsList } = this;
     const headerHeight = ELEMENTS.HEADER.offsetHeight;
-    const windowWidthMiddle = document.documentElement.clientWidth / 2;
+    const currentPositionY = window.scrollY + headerHeight;
 
-    const elementUnderScroll = document.elementFromPoint(windowWidthMiddle, headerHeight + 1);
-    const currentSection = elementUnderScroll.closest('section[data-navigation]');
+    const currentSection = sectionsList.find((section) => (section.offsetTop <= currentPositionY)
+      && (section.offsetTop + section.offsetHeight > currentPositionY));
+
+    if (!currentSection) return currentNavigationLink;
+
     const navigationLinkHref = currentSection.dataset.navigation;
-    const currentNavigationLink = container.querySelector(`a[href="${navigationLinkHref}"]`);
-
-    return currentNavigationLink;
+    const newCurrentNavigationLink = container.querySelector(`a[href="${navigationLinkHref}"]`);
+    return newCurrentNavigationLink;
   }
 
   scrollHandler() {
@@ -46,6 +49,7 @@ export default class ScrollMenu extends ActiveMenu {
   }
 
   init() {
+    this.sectionsList = [...document.querySelectorAll('section[data-navigation]')];
     this.scrollHandler();
     super.init();
   }

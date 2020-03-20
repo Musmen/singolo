@@ -87,6 +87,8 @@ html {
 
 .header {
   min-height: 95px;
+
+  user-select: none;
 }
 
 .header__wrapper {
@@ -227,6 +229,8 @@ html {
           box-sizing: border-box;
   min-height: 600px;
   padding: 0;
+
+  user-select: none;
 }
 
 .button__container {
@@ -681,6 +685,8 @@ html {
   padding-left: 11px;
   padding-top: 16px;
   padding-bottom: 14px;
+
+  user-select: none;
 }
 
 .tags__item {
@@ -746,6 +752,8 @@ html {
 
 .portfolio__images {
   padding: 5px 5px 5px 10px;
+
+  user-select: none;
 }
 
 .portfolio__image {
@@ -813,6 +821,10 @@ html {
 
 .card {
   padding-right: 19px; 
+}
+
+.card__avatar {
+  user-select: none;
 }
 
 .card_second {
@@ -884,6 +896,8 @@ html {
 
   border: 1px solid #666d89;
   border-radius: 50%;
+
+  user-select: none;
 }
 
 .social__link_facebook {
@@ -1219,6 +1233,8 @@ html {
   display: -ms-flexbox;
   display: flex;
   margin-right: 10px;
+
+  user-select: none;
 }
   
 .footer__social .social__item {

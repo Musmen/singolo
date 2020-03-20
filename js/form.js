@@ -60,7 +60,7 @@ export default class Form {
     const onOpenPopupHandler = this.onOpenPopupHandler.bind(this);
     const onClosePopupHandler = this.onClosePopupHandler.bind(this);
 
-    this.popup = new Popup(this.form, 'form__popup', onOpenPopupHandler, onClosePopupHandler);
+    this.popup = new Popup(document.querySelector('.feedback__wrapper'), 'form__popup', onOpenPopupHandler, onClosePopupHandler);
 
     this.addHandlers();
   }
