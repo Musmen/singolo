@@ -4,4 +4,4 @@
 
 ### by @Musmen
 
-[Singolo-DOM deploy](https://musmen-singolo.netlify.com/)
+[Singolo-DOM deploy](https://musmen.github.io/singolo/)
