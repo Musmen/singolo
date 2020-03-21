@@ -1,4 +1,4 @@
-import ActiveMenu from './activeMenu.js';
+import ActiveMenu from './activeMenu';
 
 export default class TagsMenu extends ActiveMenu {
   constructor(container, targetClass, activeClass) {

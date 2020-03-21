@@ -1,4 +1,4 @@
-import { ENTER_KEY } from './helper.js';
+import { ENTER_KEY } from './helper';
 
 export default class ActiveMenu {
   constructor(container, targetClass, activeClass) {

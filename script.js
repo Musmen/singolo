@@ -1,8 +1,10 @@
-import ActiveMenu from './js/activeMenu.js';
-import ScrollMenu from './js/scrollMenu.js';
-import TagsMenu from './js/tagsMenu.js';
-import Slider from './js/slider.js';
-import Form from './js/form.js';
+import './scss/style.scss';
+
+import ActiveMenu from './js/activeMenu';
+import ScrollMenu from './js/scrollMenu';
+import TagsMenu from './js/tagsMenu';
+import Slider from './js/slider';
+import Form from './js/form';
 
 window.onload = () => {
   const mainNavigation = document.querySelector('#mainNavigation');

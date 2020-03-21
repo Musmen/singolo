@@ -1,6 +1,6 @@
-import ActiveMenu from './activeMenu.js';
-import { ELEMENTS } from './helper.js';
-import { isDocumentBottomReached } from './utils.js';
+import ActiveMenu from './activeMenu';
+import { ELEMENTS } from './helper';
+import { isDocumentBottomReached } from './utils';
 
 export default class ScrollMenu extends ActiveMenu {
   constructor(container, targetClass, activeClass) {
