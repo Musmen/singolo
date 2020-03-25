@@ -21,9 +21,10 @@
   margin-left: 12px;
   padding-bottom: 2px;
 
-  font-size: 12px;
-  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
   font-family: "Lato-Regular", "Arial", sans-serif;
+  font-weight: 900;
 }
 
 .footer__social {
@@ -34,14 +35,18 @@
 
   user-select: none;
 }
-  
+
 .footer__social .social__item {
   margin-left: 8px;
   padding: 0;
 }
 
-.footer__social .social__link:focus, 
-.footer__social .social__link:hover, 
-.footer__social .social__link:active {
-  background-color: #6fbdc0;
+.footer__social .social__link {
+  &:focus,
+  &:hover,
+  &:active {
+    background-color: #6fbdc0;
+
+    @include transition;
+  }
 }

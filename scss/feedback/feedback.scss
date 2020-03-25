@@ -1,11 +1,9 @@
-/* ---------------------------------- feedback --------------------------------- */
-
 .feedback {
   scroll-margin-top: 50px;
 }
 
 .feedback__wrapper {
-  min-height: 654px;
+  // min-height: 654px;
   padding: 0 40px;
 
   color: #f0d8d9;
@@ -20,24 +18,34 @@
   padding-top: 60px;
   letter-spacing: -0.0035em;
   color: inherit;
+
+  @include media-desktop {
+    padding-top: 52px;
+  }
 }
 
 .feedback__description {
   margin-top: 19px;
   margin-left: 1px;
-  margin-bottom: 44px;
+  margin-bottom: 42px;
 
   font-size: 18px;
   font-weight: 300;
   font-family: "Lato-Light", "Arial", sans-serif;
   line-height: 30px;
   text-align: justify;
+
+  @include media-desktop {
+    margin-bottom: 24px;
+  }
 }
 
 .two-columns-layout {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  justify-content: space-between;
+  flex: 1;
 }
 
 .feedback__form {
@@ -48,8 +56,13 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 619px;
+  width: 622px;
   margin-right: 20px;
+
+  @include media-desktop {
+    width: 71vw;
+    margin-right: 28px;
+  }
 }
 
 .form__input {
@@ -71,21 +84,32 @@
   border-radius: 5px;
 
   overflow: hidden;
-}
 
-.form__input:focus,
-.form__input:hover,
-.form__input:active {
-  padding: 1px 13px;
+  &:focus,
+  &:hover,
+  &:active {
+    padding: 1px 13px;
 
-  color: white;
+    color: white;
 
-  outline: 0;
-  border: 2px solid #767e9e;
-}
+    outline: 0;
+    border: 2px solid #767e9e;
 
-.form__input:focus:invalid {
-  background-color: red;
+    @include media-desktop {
+      padding: 1px 8px;
+    }
+
+    @include transition;
+  }
+
+  &:focus:invalid {
+    background-color: red;
+  }
+
+  @include media-desktop {
+    margin-bottom: 12px;
+    padding: 3px 10px;
+  }
 }
 
 .form__input::-webkit-input-placeholder {
@@ -139,38 +163,62 @@
 }
 
 .form__message {
-  min-height: 202px;
+  min-height: 159px;
+  margin-bottom: 14px;
   padding-top: 7px;
 
   resize: none;
-}
 
-.form__message:focus,
-.form__message:hover,
-.form__message:active {
-  padding-top: 5px;
+  &:focus,
+  &:hover,
+  &:active {
+    padding-top: 5px;
+  }
+
+  @include media-desktop {
+    margin-bottom: 17px;
+  }
 }
 
 .form__submit {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  width: 200px;
-  margin-bottom: 10px;
-}
+  width: 136px;
+  min-height: 38px;
+  margin-bottom: 58px;
 
-.form__submit:focus,
-.form__submit:hover,
-.form__submit:active {
-  background-color: #767e9e;
-  
-  cursor: pointer;
+  font-family:"Lato-Black", "Arial", "sans-serif";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #886A30;
+
+  background-color: #fbc65f;
+
+  &:focus,
+  &:hover,
+  &:active {
+    background-color: #767e9e;
+
+    cursor: pointer;
+
+    @include transition;
+  }
+
+  @include media-desktop {
+    margin-bottom: 40px;
+  }
 }
 
 .feedback__contacts {
   width: calc(100% - 640px);
   padding-left: 1px;
   padding-top: 1px;
+
+  @include media-desktop {
+    width: 35vw;
+  }
 }
 
 .contacts__title {
@@ -193,10 +241,15 @@
   line-height: 22.5px;
   letter-spacing: -0.0035em;
   text-align: justify;
-}
 
-.contacts__description::first-line {
-  line-height: 20px;
+  &::first-line {
+    line-height: 20px;
+  }
+
+  @include media-desktop {
+    margin-top: 4px;
+    margin-bottom: 10px;
+  }
 }
 
 .contacts__item {
@@ -236,12 +289,14 @@
   text-decoration: underline;
 
   outline-color: #767e9e;
+
+  @include transition;
 }
 
 .contacts__icon {
   width: 23px;
   height: 17px;
-  
+
   background-repeat: no-repeat;
 }
 
