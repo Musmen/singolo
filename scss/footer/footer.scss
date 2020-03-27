@@ -25,6 +25,10 @@
   line-height: 18px;
   font-family: "Lato-Regular", "Arial", sans-serif;
   font-weight: 900;
+
+  @include media-tablet {
+    display: none;
+  }
 }
 
 .footer__social {
@@ -34,6 +38,11 @@
   margin-right: 10px;
 
   user-select: none;
+
+  @include media-tablet {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 .footer__social .social__item {

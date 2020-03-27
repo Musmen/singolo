@@ -18,12 +18,26 @@
     // max-height: 2000px;
     // height: 225vw;
   // }
+
+  @include media-tablet {
+    padding-right: 25px;
+    padding-left: 25px;
+
+    border-bottom: 0;
+  }
 }
 
 .portfolio__title {
   font-size: 30px;
   padding-top: 60px;
   padding-left: 10px;
+
+  @include media-tablet {
+    padding-top: 42px;
+    padding-left: 5px;
+
+    letter-spacing: -0.016em;
+  }
 }
 
 .portfolio__description {
@@ -43,6 +57,14 @@
 
     line-height: 30px;
   }
+
+  @include media-tablet {
+    padding-right: 10px;
+    padding-left: 5px;
+
+    text-align: left;
+    letter-spacing: 0.005em;
+  }
 }
 
 .tags__list {
@@ -53,12 +75,17 @@
 
   padding-left: 11px;
   padding-top: 16px;
-  padding-bottom: 14px;
+  padding-bottom: 12px;
 
   user-select: none;
 
   @include media-desktop {
-    padding-top: 11px;
+    padding-top: 12px;
+  }
+
+  @include media-tablet {
+    padding-top: 16px;
+    padding-left: 5px;
   }
 }
 
@@ -122,11 +149,11 @@
   -ms-grid-rows: 1fr 20px 1fr 20px 1fr;
   -ms-grid-columns: 1fr 10px 1fr 10px 1fr 10px 1fr;
       grid-template: 1fr 1fr 1fr / 1fr 1fr 1fr 1fr;
-  grid-column-gap: 10px;
-  grid-row-gap: 16px;
+  grid-column-gap: 15px;
+  grid-row-gap: 20px;
 
   max-height: 601px;
-  margin-bottom: 68px;
+  margin-bottom: 63px;
   padding: 5px 5px 5px 10px;
 
   overflow: hidden;
@@ -139,16 +166,18 @@
     max-height: calc(((100vw - 120px)/3)*4 + 130px);
     margin-top: 10px;
     margin-bottom: 56px;
-    padding: 5px 5px 10px 10px;
+    padding: 5px 5px 11px 10px;
   }
 
   @include media-tablet {
     grid-template: 1fr 1fr 1fr 1fr / 1fr 1fr;
-    grid-gap: 14px;
+    grid-column-gap: 13px;
+    grid-row-gap: 14px;
 
     max-height: 2000px;
-    // margin-top: 10px;
-    // padding: 5px 5px 10px 10px;
+    margin-top: 8px;
+    margin-bottom: 0;
+    padding: 5px 5px 42px 5px;
   }
 }
 
@@ -175,6 +204,10 @@
     outline: 5px solid #5f9ea0;
 
     cursor: pointer;
+
+    // @include media-tablet {
+    //   outline: 5px inset #5f9ea0;
+    // }
   }
 
   @include media-desktop {
@@ -194,4 +227,10 @@
   outline: 5px solid #F06C64;
 
   @include transition;
+
+  // @include media-tablet {
+  //   box-sizing: border-box;
+  //   border: 5px solid #F06C64;
+  //   outline: none;
+  // }
 }

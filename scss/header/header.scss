@@ -2,6 +2,10 @@
   min-height: 95px;
 
   user-select: none;
+
+  @include media-tablet {
+    min-height: 70px;
+  }
 }
 
 .header__wrapper {
@@ -27,6 +31,16 @@
 
   transform: translateX(-50%);
   z-index: 10;
+
+  @include media-tablet {
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 70px;
+    padding-top: 24px;
+    padding-left: 40px;
+
+    border: 0;
+  }
 }
 
 .logo {
@@ -34,6 +48,12 @@
 
   font-size: 25px;
   letter-spacing: -0.02em;
+
+  @include media-tablet {
+    font-size: 20px;
+    letter-spacing: -0.03em;
+    line-height: 24px;
+  }
 }
 
 .logo__link {
@@ -47,6 +67,12 @@
   color: #ffffff;
 
   text-transform: uppercase;
+}
+
+.navigation {
+  @include media-tablet {
+    display: none;
+  }
 }
 
 .logo__title_red,
@@ -71,6 +97,10 @@
 
   font-size: 12px;
   letter-spacing: -0.016em;
+
+  @include media-desktop {
+    padding-top: 4px;
+  }
 }
 
 .navigation__item {

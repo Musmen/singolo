@@ -14,6 +14,13 @@
     // min-height: 87vw;
     padding-right: 40px;
   }
+
+  @include media-tablet {
+    padding-right: 30px;
+    padding-left: 30px;
+
+    border-bottom: 0;
+  }
 }
 
 .about__title {
@@ -24,7 +31,7 @@
 
   @include media-desktop {
     // max-height: calc(((100vw - 120px)/3)*4 + 250px);
-    padding-top: 52px;
+    padding-top: 33px;
   }
 }
 
@@ -45,6 +52,12 @@
     text-align: justify;
     letter-spacing: -0.03em;
   }
+
+  @include media-tablet {
+    padding-right: 20px;
+
+    text-align: left;
+  }
 }
 
 .about__sentence {
@@ -63,6 +76,12 @@
 
   @include media-desktop {
     padding-top: 38px;
+  }
+
+  @include media-tablet {
+    flex-direction: column;
+
+    padding-top: 24px;
   }
 }
 
@@ -87,6 +106,10 @@
     width: 100%;
     height: auto;
   }
+
+  @include media-tablet {
+    padding-bottom: 5px;
+  }
 }
 
 .card_second {
@@ -96,6 +119,10 @@
 .card_third {
   @include media-desktop {
     padding-right: 0;
+  }
+
+  @include media-tablet {
+    margin-bottom: 11px;
   }
 }
 
@@ -161,6 +188,10 @@
   @include media-desktop {
     margin-bottom: 68px;
     padding-top: 10px;
+  }
+
+  @include media-tablet {
+    margin-bottom: 35px;
   }
 }
 
