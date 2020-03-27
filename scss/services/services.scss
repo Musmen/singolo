@@ -87,6 +87,10 @@
     margin: 0;
     margin-bottom: 13px;
   }
+
+  @include media-mobile {
+    min-height: 115px;
+  }
 }
 
 .feature__item:nth-child(odd) {

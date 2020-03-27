@@ -30,7 +30,10 @@
   color: #666d89;
 
   @include media-desktop {
-    // max-height: calc(((100vw - 120px)/3)*4 + 250px);
+    padding-top: 52px;
+  }
+
+  @include media-tablet {
     padding-top: 33px;
   }
 }
