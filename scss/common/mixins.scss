@@ -4,8 +4,6 @@
   font-weight: $weight;
   font-style: $style;
   line-height: $height;
-  // text-align: justify;
-  // color: #767e9e;
 }
 
 @mixin transition($time: 0.3s, $property: all, $method: ease-out) {

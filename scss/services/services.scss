@@ -44,7 +44,6 @@
 
   @include media-desktop {
     padding-bottom: 12px;
-    // padding-right: 15px;
   }
 
   @include media-tablet {
@@ -58,11 +57,14 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .feature__item {
-  flex: 1 0 20%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 20%;
+          flex: 1 0 20%;
 
   height: 106px;
   padding-right: 16px;
@@ -76,14 +78,18 @@
   overflow: hidden;
 
   @include media-desktop {
-    flex: 1 0 25%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 25%;
+            flex: 1 0 25%;
     margin: 2.6vw;
     padding-right: 13px;
     padding-bottom: 0;
   }
 
   @include media-tablet {
-    flex: 1 0 40%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1 0 40%;
+            flex: 1 0 40%;
 
     margin: 0;
     margin-bottom: 13px;
@@ -161,8 +167,6 @@
 
   background-image: url('../assets/img/feature/feature-star.svg');
   background-position: 0 3px;
-
-
 }
 
 .feature__title {
