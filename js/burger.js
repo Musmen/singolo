@@ -72,5 +72,4 @@ export default class BurgerMenu extends Popup {
     this.burgerMenuButton = document.querySelector('#burger');
     this.burgerMenuButton.addEventListener('click', this.burgerMenuButtonClickHandler.bind(this));
   }
-
 }
