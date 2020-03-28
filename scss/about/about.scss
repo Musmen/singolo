@@ -44,7 +44,7 @@
   padding-right: 5px;
 
   font-size: 18px;
-  font-weight: 400;
+  font-weight: 300;
   font-family: "Lato-Regular", "Arial", sans-serif;
   line-height: 30px;
   color: #767e9e;
@@ -53,11 +53,11 @@
     padding-top: 18px;
     padding-right: 17px;
     text-align: justify;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.005em;
   }
 
   @include media-tablet {
-    padding-right: 20px;
+    padding-right: 0;
 
     text-align: left;
   }
@@ -75,7 +75,7 @@
   display: flex;
   flex-grow: 0;
 
-  padding-top: 43px;
+  padding-top: 42px;
 
   @include media-desktop {
     padding-top: 38px;

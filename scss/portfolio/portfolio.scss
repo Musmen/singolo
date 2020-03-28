@@ -50,12 +50,14 @@
   font-family: "Lato-Light", "Arial", sans-serif;
   color: #767e9e;
   text-align: justify;
+  letter-spacing: 0.01em;
 
   @include media-desktop {
     padding-top: 17px;
     padding-right: 50px;
 
     line-height: 30px;
+    letter-spacing: 0;
   }
 
   @include media-tablet {
@@ -84,7 +86,7 @@
   }
 
   @include media-tablet {
-    padding-top: 16px;
+    padding-top: 14px;
     padding-left: 5px;
   }
 }
@@ -166,7 +168,7 @@
     max-height: calc(((100vw - 120px)/3)*4 + 130px);
     margin-top: 10px;
     margin-bottom: 56px;
-    padding: 5px 5px 11px 10px;
+    padding: 7px 10px 11px 10px;
   }
 
   @include media-tablet {

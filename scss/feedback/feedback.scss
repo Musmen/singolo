@@ -42,13 +42,14 @@
   font-weight: 300;
   font-family: "Lato-Light", "Arial", sans-serif;
   line-height: 30px;
-  text-align: justify;
+  letter-spacing: 0.01em;
 
   @include media-desktop {
     margin-bottom: 24px;
   }
 
   @include media-tablet {
+    margin-bottom: 22px;
     padding-right: 10px;
 
     text-align: left;
@@ -203,7 +204,7 @@
   }
 
   @include media-tablet {
-    margin-bottom: 12px;
+    margin-bottom: 14px;
   }
 }
 

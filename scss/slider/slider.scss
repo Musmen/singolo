@@ -27,7 +27,8 @@
   z-index: 7;
 
   @include media-tablet {
-    width: 10%;
+    width: 10.7%;
+    min-width: 40px;
   }
 }
 

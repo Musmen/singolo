@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Singolo DOM | Singolo Responsive</title>
-    <link rel="shortcut icon" type="image/png" href="./assets/favicon/favicon.png"/>
+    <link rel="shortcut icon" type="image/png" href="./assets/favicon/favicon.png">
   </head>
 
   <body class="main-page">
+    <button id="burger" class="burger__button button"></button>
     <header class="header">
       <div class="header__wrapper wrapper">
         <h1 class="logo">
@@ -17,7 +18,7 @@
             </span>
           </a>
         </h1>
-        <nav class="navigation">
+        <nav id="navigation" class="navigation">
           <ul id="mainNavigation" class="navigation__list list">
             <li class="navigation__item">
               <a class="navigation__link link" href="#">home</a>
@@ -96,7 +97,7 @@
           <li class="feature__item feature_ideas">
             <h3 class="feature__title title">Inovative Ideas</h3>
             <p class="feature__description feature__description_ideas">
-              Quisque luctus, quam eget molestie com&shy;modo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.
+              Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.
             </p>
           </li>
           <li class="feature__item feature_answer">
@@ -108,13 +109,13 @@
           <li class="feature__item feature_layout">
             <h3 class="feature__title title">Responsive Layout</h3>
             <p class="feature__description feature__description_layout">
-              Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit nunc ligula. Prae&shy;sent elit leo.
+              Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit nunc ligula. Praesent elit leo.
             </p>
           </li>
           <li class="feature__item feature_support">
             <h3 class="feature__title title">24 / 7 Support</h3>
             <p class="feature__description feature__description_support">
-              Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat. Pellen&shy;tesque egestas venenatis lorem .
+              Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat. Pellentesque egestas venenatis lorem .
             </p>
           </li>
           <li class="feature__item feature_star">
@@ -204,7 +205,7 @@
         <h2 class="about__title title">About Us</h2>
         <p class="about__description">
           Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor
-          <span class="about__sentence">ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</span>
+          ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
         </p>
         <div class="cards">
           <div class="card">
@@ -359,6 +360,13 @@
             </p><hr>
           </div>
           <button class="popup__close-button">OK</button>
+        </div>
+      </div>
+    </template>
+
+    <template id="burger__template">
+      <div class="burger__layout" tabindex="0">
+        <div class="burger__wrapper">
         </div>
       </div>
     </template>
