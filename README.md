@@ -4,4 +4,4 @@
 
 ### by @Musmen
 
-[Singolo-DOM deploy](https://musmen.github.io/singolo/)
+[Singolo DOM & Responsive deploy](https://musmen.github.io/singolo/)

@@ -1,12 +1,16 @@
-import ActiveMenu from './js/activeMenu.js';
-import ScrollMenu from './js/scrollMenu.js';
-import TagsMenu from './js/tagsMenu.js';
-import Slider from './js/slider.js';
-import Form from './js/form.js';
+import './scss/style.scss';
+
+import { ELEMENTS } from './js/helper';
+import ActiveMenu from './js/activeMenu';
+import ScrollMenu from './js/scrollMenu';
+import TagsMenu from './js/tagsMenu';
+import Slider from './js/slider';
+import Form from './js/form';
+import BurgerMenu from './js/burger';
 
 window.onload = () => {
-  const mainNavigation = document.querySelector('#mainNavigation');
-  const mainNavigationActiveMenu = new ScrollMenu(mainNavigation, 'navigation__link', 'navigation__link_active');
+  // const mainNavigation = document.querySelector('#mainNavigation');
+  const mainNavigationActiveMenu = new ScrollMenu(ELEMENTS.NAVIGATION, 'navigation__link', 'navigation__link_active');
   mainNavigationActiveMenu.init();
 
   const portfolioImages = document.querySelector('#portfolioImages');
@@ -22,4 +26,7 @@ window.onload = () => {
 
   const form = new Form();
   form.init();
+
+  const burger = new BurgerMenu(document.body, 'burger__navigation');
+  burger.init();
 };

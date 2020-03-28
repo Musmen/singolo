@@ -1,4 +1,4 @@
-import { ENTER_KEY } from './helper.js';
+import { ENTER_KEY } from './helper';
 
 export default class Slider {
   constructor() {
@@ -65,7 +65,7 @@ export default class Slider {
     const dataClass = target.getAttribute('data-class');
     if (!dataClass) return;
 
-    const content = this.slider.querySelector(`.${dataClass}-content`);
+    const content = this.slider.querySelector(`.${dataClass}`);
     content.classList.toggle('display-off');
   }
 

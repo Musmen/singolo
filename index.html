@@ -3,14 +3,12 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Singolo</title>
-    <link rel="shortcut icon" type="image/png" href="./assets/favicon.png"/>
-    <link href="./css/normalize.css" rel="stylesheet">
-    <link href="./css/fonts.css" rel="stylesheet">    
-    <link href="./css/style.css" rel="stylesheet">
+    <title>Singolo DOM | Singolo Responsive</title>
+    <link rel="shortcut icon" type="image/png" href="./assets/favicon/favicon.png">
   </head>
 
   <body class="main-page">
+    <button id="burger" class="burger__button button"></button>
     <header class="header">
       <div class="header__wrapper wrapper">
         <h1 class="logo">
@@ -20,7 +18,7 @@
             </span>
           </a>
         </h1>
-        <nav class="navigation">
+        <nav id="navigation" class="navigation">
           <ul id="mainNavigation" class="navigation__list list">
             <li class="navigation__item">
               <a class="navigation__link link" href="#">home</a>
@@ -41,48 +39,44 @@
         </nav>
       </div>
     </header>
-    
+
     <section class="slider" data-navigation="#">
       <h2 class="visually-hidden">Our portfolio</h2>
       <div class="slider__wrapper wrapper">
         <div class="button__container button__container_left">
-          <button class="button slider__button slider__button_previous"></button>
+          <button class="button slider__button slider__button_previous">
+            <span class="slider__button-icon"></span>
+          </button>
         </div>
+
         <div class="gallery">
           <div class="slider__item slider__active">
-            <img class="gallery__item gallery__item_left gallery__item_left-content"
-              src="./assets/img/slider/phone-vertical-display.png" alt="Vertical design. Display"
-              data-class="gallery__item_left">
-            <img class="gallery__item gallery__item_left gallery__item_left-phone" tabindex="0"
-              src="./assets/img/slider/phone.png" alt="Vertical design. Phone"
-              data-class="gallery__item_left">
-            <img class="gallery__item gallery__item_left gallery__item_left-shadow"
-               src="./assets/img/slider/phone-shadow.png" alt="Vertical design. Background">
-
-            <img class="gallery__item gallery__item_right gallery__item_right-content"
-              src="./assets/img/slider/phone-horizontal-display.png" alt="Horizontal design. Display"
-              data-class="gallery__item_right">
-            <img class="gallery__item gallery__item_right gallery__item_right-phone" tabindex="0"
-              src="./assets/img/slider/phone.png" alt="Horizontal design. Phone"
-              data-class="gallery__item_right">
-            <img class="gallery__item gallery__item_right gallery__item_right-shadow"
-             src="./assets/img/slider/phone-shadow.png" alt="Horizontal design. Background">
+            <div class="gallery__wrapper">
+              <div class="gallery__container gallery__container_left">
+                <img class="gallery__item gallery__item_left"
+                  src="./assets/img/slider/phone-vertical-display.png" alt="Vertical design. Display"
+                  data-class="gallery__item_left" tabindex="0">
+              </div>
+              <div class="gallery__container gallery__container_right">
+                <img class="gallery__item gallery__item_right"
+                  src="./assets/img/slider/phone-horizontal-display.png" alt="Horizontal design. Display"
+                  data-class="gallery__item_right" tabindex="0">
+              </div>
+            </div>
           </div>
 
-          <div class="slider__item slider__item_blue">
-            <img class="gallery__item" src="./assets/img/slider/slide2.png" alt="Blue design">
-            <img class="gallery__item gallery__item_slide2 gallery__item_slide2-content"
-              src="./assets/img/slider/phone-vertical-display-slide2.png" alt="Vertical design. Display"
-              data-class="gallery__item_slide2">
-            <img class="gallery__item gallery__item_slide2 gallery__item_slide2-phone" tabindex="0"
-              src="./assets/img/slider/phone.png" alt="Vertical design. Phone"
-              data-class="gallery__item_slide2">
-            <img class="gallery__item gallery__item_slide2 gallery__item_slide2-shadow"
-              src="./assets/img/slider/phone-shadow.png" alt="Vertical design. Background">
+          <div class="slider__item slider__item_slide2">
+            <div class="gallery__container gallery__container_slide2">
+              <img class="gallery__item gallery__item_slide2"
+                src="./assets/img/slider/slide2.png" alt="Vertical design. Phones">
+            </div>
           </div>
-        </div>    
+        </div>
+
         <div class="button__container button__container_right">
-          <button class="button slider__button slider__button_next"></button>
+          <button class="button slider__button slider__button_next">
+            <span class="slider__button-icon"></span>
+          </button>
         </div>
       </div>
     </section>
@@ -93,50 +87,44 @@
         <p class="services__description">
           Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
         </p>
-        <div class="three-columns-layout">
-          <div class="two-rows-layout">
-            <div class="feature feature_design">
-              <h3 class="feature__title title">Custom Design</h3>
-              <p class="feature__description feature__description_design">
-                Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.
-              </p>
-            </div>
-            <div class="feature feature_layout">
-              <h3 class="feature__title title">Responsive Layout</h3>
-              <p class="feature__description feature__description_layout">
-                Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit nunc ligula. Prae&shy;sent elit leo.
-              </p>
-            </div>
-          </div>
-          <div class="two-rows-layout">
-            <div class="feature feature_ideas">
-              <h3 class="feature__title title">Inovative Ideas</h3>
-              <p class="feature__description feature__description_ideas">
-                Quisque luctus, quam eget molestie com&shy;modo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.
-              </p>
-            </div>
-            <div class="feature feature_support">
-              <h3 class="feature__title title">24 / 7 Support</h3>
-              <p class="feature__description feature__description_support">
-                Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat. Pellen&shy;tesque egestas venenatis lorem .
-              </p>
-            </div>
-          </div>
-          <div class="two-rows-layout">
-            <div class="feature feature_answer">
-              <h3 class="feature__title title">Love Is The Answer</h3>
-              <p class="feature__description feature__description_answer">
-                Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.
-              </p>
-            </div>
-            <div class="feature feature_star">
-              <h3 class="feature__title title">Feel Like A Star</h3>
-              <p class="feature__description feature__description_star">
-                Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus.
-              </p>
-            </div>
-          </div>
-        </div>
+        <ul class="features__list list">
+          <li class="feature__item feature_design">
+            <h3 class="feature__title title">Custom Design</h3>
+            <p class="feature__description feature__description_design">
+              Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.
+            </p>
+          </li>
+          <li class="feature__item feature_ideas">
+            <h3 class="feature__title title">Inovative Ideas</h3>
+            <p class="feature__description feature__description_ideas">
+              Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.
+            </p>
+          </li>
+          <li class="feature__item feature_answer">
+            <h3 class="feature__title title">Love Is The Answer</h3>
+            <p class="feature__description feature__description_answer">
+              Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque condimentum.
+            </p>
+          </li>
+          <li class="feature__item feature_layout">
+            <h3 class="feature__title title">Responsive Layout</h3>
+            <p class="feature__description feature__description_layout">
+              Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit nunc ligula. Praesent elit leo.
+            </p>
+          </li>
+          <li class="feature__item feature_support">
+            <h3 class="feature__title title">24 / 7 Support</h3>
+            <p class="feature__description feature__description_support">
+              Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat. Pellentesque egestas venenatis lorem .
+            </p>
+          </li>
+          <li class="feature__item feature_star">
+            <h3 class="feature__title title">Feel Like A Star</h3>
+            <p class="feature__description feature__description_star">
+              Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus.
+            </p>
+          </li>
+        </ul>
       </div>
     </section>
 
@@ -160,7 +148,7 @@
             <button class="tags__button">Artwork</button>
           </li>
         </ul>
-        <ul id="portfolioImages" class="portfolio__images four-columns-three-rows-layout list">
+        <ul id="portfolioImages" class="portfolio__images list">
           <li class="images__item">
             <img src="assets/img/portfolio/portfolio1.png" width="220" height="187"
               alt="Portfolio example №1" class="portfolio__image" tabindex="0">
@@ -217,9 +205,9 @@
         <h2 class="about__title title">About Us</h2>
         <p class="about__description">
           Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor
-          <span class="about__sentence">ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</span>
+          ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
         </p>
-        <div class="three-columns-layout">
+        <div class="cards">
           <div class="card">
             <img class="card__avatar card__avatar_jensen"
               src="./assets/img/about/jensen.png" width="300" height="300" alt="Adam Jensen photo">
@@ -300,18 +288,18 @@
           Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
         </p>
         <div class="two-columns-layout">
-          <form id="feedback__form" class="feedback__form" 
+          <form id="feedback__form" class="feedback__form"
             action="https://www.w3schools.com/action_page.php"
             method="post" name="feedback" target="_blank">
-            <input class="form__name form__input" type="text" name="name" 
+            <input class="form__name form__input" type="text" name="name"
               placeholder="Name (Required)" minlength="2" maxlength="50" required>
-            <input class="form__email form__input" type="email" name="email" 
+            <input class="form__email form__input" type="email" name="email"
               placeholder="Email (Required)" required>
-            <input id="form__subject" class="form__subject form__input" 
+            <input id="form__subject" class="form__subject form__input"
               maxlength="100" type="text" name="subject" placeholder="Subject">
-            <textarea id="form__message" class="form__message form__input" name="message" 
+            <textarea id="form__message" class="form__message form__input" name="message"
               maxlength="500" placeholder="Describe your project in detail..."></textarea>
-            <input id="form__submit" class="form__submit form__input" type="submit" value="Submit">
+            <input id="form__submit" class="form__submit form__input" type="submit" value="Send">
           </form>
           <div class="feedback__contacts">
             <h3 class="contacts__title title">Contact Information</h3>
@@ -339,7 +327,7 @@
 
     <footer class="footer">
       <div class="footer__wrapper wrapper">
-        <span class="footer__copyright">© Copyright 2013 · by PSDchat.com</span>
+        <span class="footer__copyright">© Copyright 2013</span>
         <ul class="footer__social list">
           <li class="social__item">
             <a class="social__link social__link_facebook link" href="#"></a>
@@ -376,6 +364,12 @@
       </div>
     </template>
 
-    <script src="script.js" type="module"></script>
+    <template id="burger__template">
+      <div class="burger__layout" tabindex="0">
+        <div class="burger__wrapper">
+        </div>
+      </div>
+    </template>
+
   </body>
 </html>

@@ -1,6 +1,6 @@
-import { FORM_DEFAULT_TEXT } from './helper.js';
-import { disableTab } from './utils.js';
-import Popup from './popup.js';
+import { FORM_DEFAULT_TEXT } from './helper';
+import { disableTab } from './utils';
+import Popup from './popup';
 
 export default class Form {
   constructor() {
@@ -12,13 +12,13 @@ export default class Form {
   }
 
   onOpenPopupHandler(popup) {
-    popup.addEventListener('keydown', disableTab);
+    popup.addEventListener('keydown', disableTab.bind(this));
   }
 
   onClosePopupHandler(popup) {
     const { formSubmitButton } = this;
 
-    popup.removeEventListener('keydown', disableTab);
+    popup.removeEventListener('keydown', disableTab.bind(this));
     formSubmitButton.focus();
     this.form.reset();
   }

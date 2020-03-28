@@ -8,5 +8,7 @@ export const FORM_DEFAULT_TEXT = {
 
 export const ELEMENTS = {
   HEADER: document.querySelector('.header'),
+  NAVIGATION: document.querySelector('#navigation'),
+  NAVIGATION_LIST: document.querySelector('#mainNavigation'),
   LAST_NAVIGATION_ITEM: document.querySelector('#mainNavigation').querySelector('a[href="#feedback"]'),
 };

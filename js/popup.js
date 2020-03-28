@@ -1,4 +1,4 @@
-import { disableDocumentScroll, enableDocumentScroll } from './utils.js';
+import { disableDocumentScroll, enableDocumentScroll } from './utils';
 
 export default class Popup {
   constructor(container = null, mainClass = 'popup', onOpenCallback, onCloseCallback) {
