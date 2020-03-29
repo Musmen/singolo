@@ -1,9 +1,9 @@
-export const disableDocumentScroll = () => {
-  document.body.classList.add('overflow-hidden');
+export const disableDocumentScroll = (className = 'overflow-hidden') => {
+  document.body.classList.add(className);
 };
 
-export const enableDocumentScroll = () => {
-  document.body.classList.remove('overflow-hidden');
+export const enableDocumentScroll = (className = 'overflow-hidden') => {
+  document.body.classList.remove(className);
 };
 
 export const disableTab = (event) => {

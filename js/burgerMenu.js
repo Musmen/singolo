@@ -35,7 +35,7 @@ export default class BurgerMenu extends Popup {
     popupLayout.focus();
     popupLayout.addEventListener('keydown', disableTab.bind(this));
 
-    disableDocumentScroll();
+    disableDocumentScroll('overflow-hidden-burger');
     this.isOpen = true;
     this.rotateBurgerMenuButtonIcon();
   }
@@ -45,7 +45,7 @@ export default class BurgerMenu extends Popup {
     const popup = container.querySelector('.burger__layout');
     popup.remove();
 
-    enableDocumentScroll();
+    enableDocumentScroll('overflow-hidden-burger');
     this.isOpen = false;
     this.rotateBurgerMenuButtonIcon();
   }

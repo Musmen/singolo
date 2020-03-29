@@ -19,7 +19,6 @@ export default class TagsMenu extends ActiveMenu {
 
   getNewPortfolioImages() {
     const imageItems = [...this.portfolioImages.querySelectorAll('.images__item')];
-
     const firstImage = imageItems[0];
     const restImages = imageItems.slice(1);
     const newPortfolioImages = restImages.concat(firstImage);

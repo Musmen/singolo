@@ -172,7 +172,7 @@
   width: 69%;
   padding-top: 2.8%;
   padding-right: 13.4%;
-  padding-bottom: 3%;
+  padding-bottom: 2.6%;
   padding-left: 12.4%;
 
   border-radius: 26px;
@@ -183,12 +183,10 @@
 
   @include media-max-width(770px) {
     padding-top: 3%;
-    padding-right: 13.8%;
     padding-left: 12.5%;
   }
 
   @include media-max-width(600px) {
-    padding-right: 14.2%;
     padding-top: 2.8%;
   }
 }
